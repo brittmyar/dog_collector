@@ -5,6 +5,7 @@
 {% for dog in dogs %}
 <div class="card">
   <div class="card-content">
+    <a href="{% url 'detail' dog.id %}"> 
     <span class="card-title">{{ dog.name }}</span>
     <p>Breed: {{ dog.breed }}</p>
     <p>Description: {{ dog.description }}</p>
@@ -14,5 +15,6 @@
     <p>Age: Puppy</p>
     {% endif %}
   </div>
+</a>
 </div>
 {% endfor %} {% endblock %}
